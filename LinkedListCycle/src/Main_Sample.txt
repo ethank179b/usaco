@@ -1,0 +1,44 @@
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) {
+        val = x;
+        next = null;
+    }
+}
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int[] headData = { 3,2,0,4};
+
+        ListNode head = null;
+
+        if(headData.length > 0) {
+            head = new ListNode(headData[0]);
+        }
+        ListNode currentNode = head;
+
+        for(int data: headData) {
+
+            ListNode tempNode = new ListNode(data);
+            currentNode.next = tempNode;
+            currentNode = tempNode;
+        }
+
+        print(head);
+    }
+
+    public static void print(ListNode head) {
+        while(head != null) {
+            System.out.println(head.val + " ");
+            head = head.next;
+        }
+    }
+
+    public ListNode detectCycle(ListNode head) {
+
+        return null;
+    }
+}
